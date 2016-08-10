@@ -1,0 +1,22 @@
+{
+  "name": "symfony_test",
+  "homepage": "https://github.com/ouranoshong/framework",
+  "authors": [
+    "hong <hong@xiyanghui.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.7",
+    "lazysizes": "^2.0.0"
+  }
+}
