@@ -7,3 +7,16 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    app.twig.app_extension:
+        public:    false
+        class:     AppBundle\Twig\AppExtension
+        arguments: ['%app_locales%']
+        tags:
+            - { name: twig.extension }
+
+    app.twig.intl_extension:
+        public: false
+        class:  Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }

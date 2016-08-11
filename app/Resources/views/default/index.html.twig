@@ -10,6 +10,13 @@
 
 
                 <p>{{ 'Symfony is great' | trans |raw }}</p>
+
+                <div>{{ 'support language' | trans }}:
+                    {% for locale in locales() %}
+                        <p {% if app.request.locale == locale.code %}class="active"{% endif %}><a href="{{ path(app.request.get('_route', 'blog_index'), app.request.get('_route_params', [])|merge({ _locale: locale.code })) }}">{{ locale.name|capitalize }}</a></p>
+                    {% endfor %}
+                </div>
+
             </div>
 
             <div id="status">
