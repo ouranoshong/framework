@@ -26,6 +26,8 @@
                     Your application is now ready. You can start working on it at:
                     {#<code>{{ base_dir }}/</code>#}
                 </p>
+
+                <i class="material-icons right">more_vert</i>
             </div>
 
             <div id="next">
@@ -59,8 +61,14 @@
 {% endblock %}
 
 {% block stylesheets %}
-    <style>
 
+    <link rel="stylesheet" href="{{ asset('assets/vendor/materialize/dist/css/materialize.min.css') }}">
+
+    {% stylesheets '%kernel.root_dir%/Resources/assets/fonts/Material_Icons.woff2' output="assets/fonts/Material_Icons.woff2" %}
+        <link href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <style>
 
         @font-face {
             font-family: 'Material Icons';
@@ -112,9 +120,6 @@
         }
 
     </style>
-
-    <link rel="stylesheet" href="{{ asset('assets/vendor/materialize/dist/css/materialize.min.css') }}">
-
 {% endblock %}
 
 {% block javascripts %}
@@ -122,5 +127,8 @@
     <script type="text/javascript" src="{{ asset('assets/vendor/materialize/dist/js/materialize.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/vendor/lazysizes/lazysizes.min.js') }}"></script>
 
+    {% javascripts '%kernel.root_dir%/Resources/assets/js/main.js' output='assets/js/main.js'%}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 {% endblock %}
 
