@@ -64,17 +64,16 @@
 
     <link rel="stylesheet" href="{{ asset('assets/vendor/materialize/dist/css/materialize.min.css') }}">
 
-    {% stylesheets '%kernel.root_dir%/Resources/assets/fonts/Material_Icons.woff2' output="assets/fonts/Material_Icons.woff2" %}
-        <link href="{{ asset_url }}" />
+    {% stylesheets '%kernel.root_dir%/Resources/assets/fonts/Material_Icons.woff' output="assets/fonts/Material_Icons.woff" %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
 
     <style>
-
         @font-face {
             font-family: 'Material Icons';
             font-style: normal;
             font-weight: 400;
-            src:  local('Material Icons'), local('MaterialIcons-Regular'), url('{{ asset('assets/fonts/Material_Icons.woff2') }}') format('woff2');
+            src:  local('Material Icons'), local('MaterialIcons-Regular'), url('{{ asset('assets/fonts/Material_Icons.woff') }}') format('woff');
         }
 
         .material-icons {
