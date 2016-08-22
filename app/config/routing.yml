@@ -15,3 +15,6 @@ homepage:
         _controller: FrameworkBundle:Template:template
         template:    default/index.html.twig
         _locale:     '%locale%'
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

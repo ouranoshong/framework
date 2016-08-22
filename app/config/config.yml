@@ -75,3 +75,25 @@ assetic:
     use_controller: '%kernel.debug%'
     filters:
         cssrewrite: ~
+
+liip_imagine:
+    resolvers:
+        default:
+            web_path: ~
+    filter_sets:
+        cache: ~
+
+        large:
+            quality: 100
+            filters:
+                thumbnail: { size: [1440, 960], mode: outbound }
+
+        medium:
+            quality: 100
+            filters:
+                thumbnail: { size: [768, 512], mode: outbound }
+
+        small:
+            quality: 100
+            filters:
+                thumbnail: { size: [425, 283], mode: outbound }
