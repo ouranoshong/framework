@@ -16,3 +16,8 @@
 /web/bundles/
 /web/assets/vendor
 .idea/
+.DS_Store
+app/Resources/assets/.DS_Store
+var/cache/
+web/.DS_Store
+web/media/
