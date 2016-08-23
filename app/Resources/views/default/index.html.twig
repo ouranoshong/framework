@@ -8,7 +8,7 @@
 
                 <h3><a href="{{ path('test') }}">Test page</a></h3>
 
-                <img src="{{ 'images/xiaomao.jpeg'|imagine_filter('small') }}" srcset="{{ 'images/xiaomao.jpeg'|imagine_filter('small') }} 425w,
+                <img style="width: 100%;" src="{{ 'images/xiaomao.jpeg'|imagine_filter('small') }}" srcset="{{ 'images/xiaomao.jpeg'|imagine_filter('small') }} 425w,
                                 {{ 'images/xiaomao.jpeg'|imagine_filter('medium') }} 768w,
                                 {{ 'images/xiaomao.jpeg'|imagine_filter('large') }} 1440w"
                      sizes="(max-width: 425px) 425px, (max-width: 768px) 768px, (max-width: 1440px) 1440px, 768px"  alt="" />
@@ -120,6 +120,11 @@
             @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
             @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
             .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
         }
 
     </style>
