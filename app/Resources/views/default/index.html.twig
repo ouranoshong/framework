@@ -5,6 +5,11 @@
         <div id="container">
             <div id="welcome">
                 <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
+                {% if app.user %}
+                    <p>Hello, {{ app.user.username  }} <a class="logout" href="{{ path('fos_user_security_logout') }}">logout</a> </p>
+                {% else %}
+                    <p><a href="{{ path('fos_user_security_login') }}">Login</a></p>
+                {% endif %}
 
                 <h3><a href="{{ path('test') }}">Test page</a></h3>
 

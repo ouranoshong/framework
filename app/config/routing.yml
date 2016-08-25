@@ -19,5 +19,9 @@ homepage:
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
 
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+#fos_user:
+#    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
